@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+</head>
+
+
+<body>
+
+
+  <H3>High!</H3> 
+    Do You Believe In Magic?
+   
+    <section>
+        <br>
+    <button onclick="Welcome()">YEs</button>
+    <button onclick="HahaFool()">n0</button>
+    </section>
+
+    <script>
+        function Welcome(){
+            alert("Welcome. Follow The White Rabbit.");
+        }
+
+        function HahaFool(){
+            alert("Haha Fool");
+        }
+    </script>
+
+<style>
+    #rabbit {
+      position: absolute;
+      font-size: 40px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<section>
+<div id="rabbit">🐇</div>
+
+<script>
+const rabbit = document.getElementById("rabbit");
+
+// Starting position
+let x = 100;
+let y = 100;
+
+// Speed (change these for faster/slower movement)
+let dx = 3;
+let dy = 3;
+
+// Move the rabbit
+function moveRabbit() {
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+
+  x += dx;
+  y += dy;
+
+  // Bounce off edges
+  if (x <= 0 || x >= width - 40) {
+    dx = -dx;
+  }
+  if (y <= 0 || y >= height - 40) {
+    dy = -dy;
+  }
+
+  rabbit.style.left = x + "px";
+  rabbit.style.top = y + "px";
+}
+
+// Run animation
+setInterval(moveRabbit, 20);
+
+// Click → go to link
+rabbit.addEventListener("click", function() {
+  window.location.href = "https://example.com"; // change this link
+});
+</script>
+
+
+
+</section>
+
+
+
+</body>
+
+
+</html>
